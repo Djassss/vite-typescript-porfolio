@@ -1,0 +1,133 @@
+$colorDark: #222;
+$colorLight: #ddd;
+
+header{
+  background: $colorDark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  width: 100%;
+  color: $colorLight;
+  .logo{
+    h1{
+      font-size: 35px;
+    }
+  }
+  .navbar{
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    margin-left: 50%;
+    a{
+      margin: 0 10px;
+      font-weight: 200;
+      transition: .4s;
+      color: $colorLight;
+      &:hover{
+        color: #999;
+        transition: .4s;
+      }
+    }
+  }
+  .navbar-media{
+    display: none;
+  }
+}
+.callapse{
+  display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+  header{
+    .navbar{
+      display: none;
+    }
+    .navbar-media{
+      display: flex;
+      align-items: center;
+      margin-left: 40%;
+      // background: yellow;
+      img{
+        position: absolute;
+        width: 25px;
+        height: 22px;
+        cursor: pointer;
+      }
+    }
+    .callapse{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 250px;
+      animation: callapse .4s;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 999;
+      li{
+        display: flex;
+        a{
+          margin: 20px;
+          color: #fff;
+        }
+      }
+      .xMark{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 20px;
+        margin-top: 20px;
+        width: 20px;
+        height: 20px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    .close{
+      display: none;
+      animation: callapse-alternate .4s;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) { 
+  header{
+    .logo{
+      h1{
+        font-size: 30px;
+      }
+    }
+    .callapse{
+      align-items: center;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes callapse {
+  from{
+    width: 0;
+    opacity: 0.7;
+  }
+  to{
+    // width: 250px;
+    opacity: 1;
+  }
+}
+
+@keyframes callapse-alternate { 
+  from{
+    // width: 250;
+    opacity: 1;
+    display: flex;
+  }
+  to{
+    width: 0;
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,38 @@
+
+  .carousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 850px;
+    margin: auto;
+    div{
+      border-radius: 10px;
+      height: 500px;
+      margin-bottom: -200px;
+      }
+  }
+
+  @media screen and (max-width: 900px) { 
+    .carousel{
+      width: 600px;
+      margin: auto;
+      div{
+        border-radius: 0;
+        height: 400px;
+        margin-bottom: -200px;
+        }
+    }
+  }
+
+  @media screen and (max-width: 650px) { 
+    .carousel{
+      width: 300px;
+      margin: auto;
+      div{
+        border-radius: 0;
+        height: 200px;
+        margin-bottom: 0;
+        }
+    }
+  }

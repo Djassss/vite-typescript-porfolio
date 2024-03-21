@@ -1,0 +1,26 @@
+.success{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  h3{
+    background: rgb(0, 0, 0, 0.7);
+    padding: 8px 30px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    animation: success 0.5s;
+  }
+}
+
+@keyframes success {
+  from{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
